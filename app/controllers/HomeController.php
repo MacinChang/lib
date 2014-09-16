@@ -33,6 +33,7 @@ class HomeController extends BaseController
 								   -> join('book', 'record.b_id', '=', 'book.id') ->where('id', $id) ->paginate(100);
 		$records -> getFactory() -> setViewName('pagination:;slider');
 		$borrow_record = View::make('home') -> nest('content', 'a_book', compact('records'));
+		return $borrow_record;
 	}
 
 }
