@@ -1,9 +1,10 @@
 @if(!empty($notFound))
 <p>Sorry nothing found for your query!</p>
 @else
-@foreach($posts as $post)
+@foreach($records as $record)
 	<tr class='a_record'>
-		<td class='book_id'>id</td>
+		<td class='book_id'>{{$record -> u_id}}
+		</td>
 		<td class='created_at'>借出时间</td>
 		<td class='updated_at'>还书时间</td>
 		<td claas='book_title'>书名</td>

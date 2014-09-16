@@ -27,7 +27,12 @@ class HomeController extends BaseController
 
 	public function getRecord()
 	{
-		
+		$id = Auth::user() -> id;
+		$r_id = Record::whereRaw('u_id', $id) -> paginate(100);
+		$records = DB::table('record') -> join('user', 'record.u_id', '=', 'user.id') 
+								   -> join('book', 'record.b_id', '=', 'book.id') ->where('id', $id) ->paginate(100);
+		$records -> getFactory() -> setViewName('pagination:;slider');
+		$borrow_record = View::make('home') -> nest('content', 'a_book', compact('records'));
 	}
 
 }
