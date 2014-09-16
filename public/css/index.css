@@ -1,0 +1,57 @@
+.test0{background: red;border: 1px solid;}
+.test1{background: pink;}
+.test2{background: green;}
+.test3{background: yellow;}
+*{margin: 0;padding: 0;font-family: '黑体';}
+body{background: #eee; height: 1000px;}
+#top{height: 100px; background: #0078d8; box-shadow: 0 10px 30px #8deeee;display: block;}
+#top #logo{float: left; font-size: 70px; padding-left:100px; color: #eee; text-shadow:8px 3px 10px #aaa; line-height: 100px; cursor: default;}
+#top #logo #logo_shadow{height: 100px;width: 500px;position: absolute; left: 100; top: 0; }
+#top #data{float: right; margin-right: 200px; margin-top: 80px; font-size: 15px; color: #fff;}
+#top #data span{}
+#top #data a{color: #fff;}
+
+#container{margin:50px 100px; position: relative; }
+#container #search_bl{margin-left: auto; margin-right: auto; text-align: center;}
+#container #search_bl input{height: 30px; width: 400px; line-height: 30px; font-size: 18px; outline: none; border-radius: 5px; padding-top: 3px; vertical-align: middle;}
+#container #search_bl a{display: inline-block; height: 28px;width: 50px; text-decoration: none;background: #8deeee; vertical-align: middle; line-height: 30px;font-size: 17px; border-radius: 5px; box-shadow: 2px 1px 5px #80e1e1;}
+#container #search_bl a:hover{background: #7aceee; box-shadow: 2px 1px 5px #0078d8;}
+
+#container #search_key_word	{padding: 10px 300px;}
+#container #search_key_word span{cursor:hand; color:#2E88C8; }
+#container #search_key_word span:hover{color:#064B7D; }
+
+#container #main{}
+#container #main #main_cont{width: 75%; margin-top: 60px; float: left; border: 1px solid #bbb; border-bottom: none; background: #f8f8f8; margin-bottom: 80px;}
+#container #main #main_cont #nav{margin-top: -45px;height: 45px; width: 300px; border-radius: 5px 5px 0 0;}
+#container #main #main_cont #nav a{display: inline-block; line-height: 45px; height: 45px; width: 98px; border: none; padding: 0px; margin: 0px; border-radius: 5px 5px 0 0; cursor:default; text-align: center; text-decoration: none; color: #555;}
+#container #main #main_cont #nav .setNav{border: 1px solid #ccc; border-bottom: none; background:#f8f8f8; }
+#container #main #main_cont #nav a:hover{color: #f5f5f5; background: #ccc;}
+
+#container #main #main_cont #books{}
+#container #main #main_cont #books .a_book{width: 100%;height: 250px; border-bottom: 1px solid #bbb;} 	
+#container #main #main_cont #books .a_book .book_cover{float: left; width: 170px; height: 230px; margin: 10px; background: pink;}
+#container #main #main_cont #books .a_book .book_cover img{width: 100%; height: 100%;}
+#container #main #main_cont #books .a_book .detail{ float: left; margin: 30px 20px 15px 15px; line-height: 22px; width: 70%; height: 205px; font-size: 13px;}
+#container #main #main_cont #books .a_book .detail textarea{margin-top: 10px; width: 570px; height: 110px; border: none; outline: none; resize:none; line-height: 22px; text-indent: 40px;}
+#container #main #main_cont .pagination ul{list-style: none; text-align: center}
+#container #main #main_cont .pagination li{display: inline-block; margin: 0 7px;}
+/*#container #main #main_cont .books .books_footer{margin: 20px 5px 5px; text-align: center;}
+#container #main #main_cont .books .books_footer span{cursor: default; display: inline-block; background: #ccc; border: 1px solid #bbb; border-radius: 5px; color: #999; font-size: 15px; vertical-align: middle;padding: 2px 0;}
+#container #main #main_cont .books .books_footer span:hover{color: #555; background: #ddd;}
+#container #main #main_cont .books .books_footer button {width: 70px; height: 30px; background: #ccc; outline: none; border-radius: 5px; vertical-align: middle;}
+#container #main #main_cont .books .books_footer select{width: 60px; height:30px; outline: none; border-radius: 5px; vertical-align: middle;}
+#container #main #main_cont .books .books_footer option{font-size: 15px; padding-left: 5px;}
+#container #main #main_cont .books .books_footer input{width: 60px; height: 30px; border-radius: 5px; outline: none;}*/
+#container #main #main_cont #search_result{display: none;}
+#container #main #main_cont #borrow_record{display: none;}
+
+#rec_cont{float: right; width: 300px; height: 90%; position: fixed; right: 20px; background: pink; top: 280px; }
+#rec_cont #upper{height: 30px; background: #666; cursor: pointer;}
+#rec_cont #downer{height: 30px; background: #666; cursor: pointer;}
+#rec_cont #all_rec{overflow-y: hidden; height: 90%; position: relative;}
+#rec_cont #all_rec #rec_container{overflow: hidden;}
+#rec_cont #all_rec .a_rec{height: 170px;}
+#rec_cont #all_rec .a_rec .a_rec_cover{margin: 10px; float: left; width: 120px; height: 150px; background: yellow;}
+#rec_cont #all_rec .a_rec .a_rec_cover img{width: 100%; height: 100%;}
+#rec_cont #all_rec .a_rec span{cursor: default; line-height: 18px; font-size: 14px;}
