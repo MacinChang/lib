@@ -22,10 +22,8 @@ body{background: #eee; height: 1000px;}
 #container #search_key_word span:hover{color:#064B7D; }
 
 #container #main{}
-#main_cont{width: 70%; margin-top: 60px; margin-bottom: 80px; margin-right: 50px; float: left; border: 1px solid #bbb; background: #f8f8f8; position: relative;
-							min-height:300px;_height:expression((document.documentElement.clientHeight||document.body.clientHeight)>300?"300px":""); 
-							}
-#container #main #main_cont #nav{margin-top: -46px; margin-left: -1px; height: 45px; width: 300px; border-radius: 5px 5px 0 0;}
+#container #main #main_cont{width: 75%; margin-top: 60px; float: left; border: 1px solid #bbb; border-bottom: none; background: #f8f8f8; margin-bottom: 80px;}
+#container #main #main_cont #nav{margin-top: -45px;height: 45px; width: 300px; border-radius: 5px 5px 0 0;}
 #container #main #main_cont #nav a{display: inline-block; line-height: 45px; height: 45px; width: 98px; border: none; padding: 0px; margin: 0px; border-radius: 5px 5px 0 0; cursor:default; text-align: center; text-decoration: none; color: #555;}
 #container #main #main_cont #nav .setNav{border: 1px solid #ccc; border-bottom: none; background:#f8f8f8; }
 #container #main #main_cont #nav a:hover{color: #f5f5f5; background: #ccc;}

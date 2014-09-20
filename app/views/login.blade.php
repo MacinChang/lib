@@ -27,14 +27,12 @@
 				<a href='javascript:void(0);'>还没有账号？</a>
 			</form>
 			{{-- <form id='register'>
-				<input class='input' tupe='text' id='account' placeholder='账号'><span class='tips'></span><br/>
-				<input class='input' type='text' id='id' placeholder='学号'><span class='tips'></span><br/>
-				<!-- <input class='input' type='text' id='name' placeholder='姓名'><span class='tips'>有错误</span><br/>
-				<input class='input' type='text' id='major' placeholder='专业班级'><span class='tips'>有错误</span><br/> -->
-				<input class='input' type='password' id='pw' placeholder='密码'><span class='tips'></span><br/>
-				<input class='input' type='password' id='pw2' placeholder='确认密码'><span class='tips'></span><br/>
-				<select>
-					<option>组别</option>
+				<input class='input' tupe='text' id='account' placeholder='账号'><span class='tips'>有错误</span><br/>
+				<input class='input' type='text' id='name' placeholder='姓名'><span class='tips'>有错误</span><br/>
+				<input class='input' type='text' id='major' placeholder='专业班级'><span class='tips'>有错误</span><br/>
+				<input class='input' type='password' id='pw' placeholder='密码'><span class='tips'>有错误</span><br/>
+				<input class='input' type='password' id='pw2' placeholder='确认密码'><span class='tips'>有错误</span><br/>
+				<select>组别
 					<option>web</option>
 					<option>安卓</option>
 					<option>pd</option>

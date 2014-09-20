@@ -1,17 +1,13 @@
 *{margin: 0;padding: 0; font-family:'柳楷'}
+	.ts0{background: pink; border: 1px solid #ededed;}
 	body{background: #eaeaea;}
-	#container{width: 100%; background: #0078d8;box-shadow: 0 10px 30px #8deeee;
-			min-height:300px;_height:expression((document.documentElement.clientHeight||document.body.clientHeight)>300?"300px":"");}
-	
+	#container{width: 100%; height: 50%; background: #0078d8;box-shadow: 0 10px 30px #8deeee;}
 	#left{float: left; padding: 70px 0 0 25%; color: #fff; font-size: 80px; text-shadow:8px 3px 10px #acacac;}
 	#left span{font-size: 50px; padding-left: 100px; text-shadow:5px 2px 5px #dedede;}
-	#right{float: right; width: 23%; margin-right: 200px;  position: relative; }
-	
-	#right #switch{position: absolute; right: -130px; top:30px; width: 100px; height: 35px; border: 1px solid #888; border-radius: 17px; text-align: center; line-height: 35px; font-size: 25px; color: #000; cursor: pointer;}
-	
-	#login{display: block;}
-	#register{display: none;}
-	.tips{color: red; font-size: 14px; padding-left: 20px;}
+	#right{float: right; width: 23%; margin-right: 200px; }
+	#login{display: none;}
+	#register{display: block;}
+	#register .tips{ display: inline-block; color: red; font-size: 14px; padding-left: 20px;}
 	form{width: 100%; margin-top: 30px;}
 	a{text-decoration: none; color: #fff; font-size: 14px; margin-bottom: 10px;}
 	a.submit{display: block; width: 175px; height: 32px; background:#8deeee; margin-top: 10px; text-align: center;font-size: 20px; line-height: 32px; border-radius: 5px; }
@@ -19,10 +15,6 @@
 	a.submit:active{background: #3cdddd;}
 	.input{background: #ddffff;}
 	.onFocus{background: #fff;}
-
-	
 	input{margin-top: 10px; border: none;  height: 32px; width: 175px; font-size: 20px; text-align: center; border-radius: 5px; outline: none;} 
-	select{margin-top: 10px; border: none;  height: 32px; width: 175px; font-size: 20px; text-align: center; border-radius: 5px 0 0 5px; outline: none; background: #ddffff}
-	option{background: #eee;}
 	input[type='checkbox']{width: 15px; height: 15px; background: red;vertical-align:middle; margin-top: 0; }
 	label{font-family: Tahoma; vertical-align:middle; font-size: 14px; color: #fff;}
