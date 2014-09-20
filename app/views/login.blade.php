@@ -15,32 +15,35 @@
 			<span>Library</span>
 		</div>
 		<div id="right" class=''>
-			<form id='login'>
-				<input type='text' id='account' placeholder="账号" class='input'>
+			<div id='switch'>
+				<span>注册</span>→
+			</div>
+			<form id='login' action = '/logine' method = 'get'>
+				<input type='text' id='account' placeholder="账号" class='input' name='account'><span class='tips'></span>
 				<br/>
-				<input type='password' id='password' placeholder='密码' class='input'>
+				<input type='password' id='password' placeholder='密码' class='input' name = 'password'><span class='tips'></span>
 				<br>
-				<a href='javascript:void(0);' class='submit'>登录</a>                  
+				<input type = 'submit' class = 'submit' value = '登录'> <br>               
                     <input type="checkbox" name="remenber" id="remenber" value="记住密码">
                     <label for='remenber'>记住密码</label>
-				<a href="javascript:void(0);">忘记密码？</a><br>
-				<a href='javascript:void(0);'>还没有账号？</a>
+				<a href="javascript:void(0);" id='forget'>忘记密码？</a><br>
+				<a href='javascript:void(0);' id='no_account'>还没有账号？</a>
 			</form>
-			{{-- <form id='register'>
-				<input class='input' tupe='text' id='account' placeholder='账号'><span class='tips'>有错误</span><br/>
-				<input class='input' type='text' id='name' placeholder='姓名'><span class='tips'>有错误</span><br/>
-				<input class='input' type='text' id='major' placeholder='专业班级'><span class='tips'>有错误</span><br/>
-				<input class='input' type='password' id='pw' placeholder='密码'><span class='tips'>有错误</span><br/>
-				<input class='input' type='password' id='pw2' placeholder='确认密码'><span class='tips'>有错误</span><br/>
-				<select>组别
-					<option>web</option>
-					<option>安卓</option>
-					<option>pd</option>
-					<option>rs</option>
+			<form id='register' action = 'register' method = 'post'>
+				<input class='input' tupe='text' id='account' placeholder='账号' name = 'account'><span class='tips'></span><br/>
+				<input class='input' type='text' id='name' placeholder='姓名' name = 'name'><span class='tips'></span><br/>
+				<input class='input' type='password' id='pw' placeholder='密码' name = 'password'><span class='tips'></span><br/>
+				<input class='input' type='password' id='pw2' placeholder='确认密码'><span class='tips'></span><br/>
+				<select>
+					<option value='undefined'>组别</option>
+					<option value="web">web</option>
+					<option value='安卓'>安卓</option>
+					<option value='PD'>PD</option>
+					<option value='PS'>RS</option>
 				</select><br>
-				<a href="javascript:void(0);" class='submit2'>注册</a>
-				<a href="javascript:void(0);" class='submit2'>取消</a>
-		</form> --}}
+				<input type = 'submit' class = 'submit2' id = 'register_button' value = '注册'>
+				<a href="javascript:void(0);" class='submit2' id='cancel'>取消</a>
+		</form>
 		</div>
 	</div>
 

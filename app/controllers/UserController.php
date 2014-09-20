@@ -2,7 +2,7 @@
 <?php
 	class UserController extends BaseController
 	{
-		protected $layout = 'layout.showuser';
+		///protected $layout = 'layout.showuser';
 
 		public function showLogin()
 		{
@@ -21,29 +21,36 @@
 		public function postLogin()
 		{
 			$account = Input::get('account');
-			$password = Input::get('password');
-
-			$tobeverified=[
-				'account' => $account,
-				'password' => $password
-			];
-			$rules=[
-				'account' => 'required',
-				'password' => 'required'
-			];
-
-			$validator = Validator::make($tobeverified,$rules);
-
-			if ($validator -> passes())
+			$psw = Input::get('password');
+			if(Auth::attempt(array('account' => $account, 'password' => $psw)))
 			{
-				if (Auth::attempt($tobeverified))
-					return Redirect::to('/');
-				return Redirect::to('login') -> withInput(Input::except('password')) -> with('failure','登录失败');
+				return Redirect::to('/');
 			}
 			else
 			{
-				return Redirect::to('login');
+				return "fdafafds";
 			}
+			// $tobeverified=[
+			// 	'account' => $account,
+			// 	'password' => $password
+			// ];
+			// $rules=[
+			// 	'account' => 'required',
+			// 	'password' => 'required'
+			// ];
+
+			// $validator = Validator::make($tobeverified,$rules);
+
+			// if ($validator -> passes())
+			// {
+			// 	if (Auth::attempt($tobeverified))
+			// 		return Redirect::to('/');
+			// 	return Redirect::to('login') -> withInput(Input::except('password')) -> with('failure','登录失败');
+			// }
+			// else
+			// {
+			// 	return 'Redirect::to()';
+			// }
 		}
 
 		public function postRegister()
@@ -76,27 +83,21 @@
 			//return View::make('login');		
 		}
 
-		public function getLogout()
-		{
-			Auth::logout();
-			return Redirect::to('login');
-		}
-
 		public function showSpace()
 		{
 
 		}
 		public function tryLogin()
 		{
-			$name = 'MacinChang';
+			$account = 'MacinChang';
 			$psw = 'zhangji';
-			if(Auth::attempt(array('account' => $name, 'password' => $psw)))
+			if(Auth::attempt(array('account' => $account, 'password' => $psw)))
 			{
 				return Auth::user() -> name;
 			}
 			else
 			{
-				return 'failed';
+				return Hash::make('zhangji');
 			}
 		}
 

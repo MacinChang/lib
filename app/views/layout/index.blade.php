@@ -12,8 +12,8 @@
 <div id='top' class=''>
 	<div id='logo' >ASCII Library <span id='logo_shadow'></span></div>
 	<div id='data'>
-		<span class='username'>XXX</span>,您好
-		<a href="javascript:void(0);">注销</a>
+		<span class='username'>{{$username}}</span>,您好
+		<a href="/logout">注销</a>
 	</div>
 </div>
 <div id='container' class=''>

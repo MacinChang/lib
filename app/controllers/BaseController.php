@@ -6,7 +6,7 @@ class BaseController extends Controller {
 	 * layout to use
 	 * @var View
 	 */
-	//protected $layout = 'layout.index';
+	protected $layout = 'layout.index';
 	/**
 	 * Setup the layout used by the controller.
 	 *

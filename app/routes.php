@@ -32,6 +32,8 @@ Route::group(['prefix' => 'admin', 'before' => 'checkAdmin'], function()
 
 
 Route::get('/login','UserController@showLogin');
+Route::post('/register', 'UserController@postRegister');
+Route::get('/logine', 'UserController@postLogin');
 
 Route::group(['prefix' => '', 'before' => 'checkUser'], function()
 {

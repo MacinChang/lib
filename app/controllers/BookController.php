@@ -40,7 +40,8 @@
 
 		public function showBook($b_id)
 		{
-			
+			$book = Book::whereRaw('id', $b_id) -> get();
+			$this -> layout -> result = $book;
 		}
 		public function borrowBook()
 		{
