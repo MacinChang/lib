@@ -1,6 +1,8 @@
 <?php
 	class BookController extends BaseController
 	{
+		protected $layout = 'layout.showbook';
+
 		static public function addBook()
 		{
 			$this -> layout -> source = 'add';
@@ -34,5 +36,30 @@
 		public function delBook()
 		{
 			
+		}
+
+		public function showBook($b_id)
+		{
+			
+		}
+		public function borrowBook()
+		{
+			
+		}
+		public function returnBook()
+		{
+
+		}
+
+		public function getAdd()
+		{
+			$book = new Book;
+			$book -> name = '算法导论';
+			$book -> author = '张济';
+			$book -> press = '科学出版社';
+			$book -> detail='这是一本介绍算法的书';
+			$book -> image_url = 'http://img5.douban.com/lpic/s1959967.jpg';
+			$book -> save();
+			$this -> layout -> result = 'success';
 		}
 	}

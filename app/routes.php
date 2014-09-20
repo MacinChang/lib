@@ -14,6 +14,8 @@
 
  //测试
  Route::get('/try', 'UserController@tryLogin');
+ Route::get('/logout', 'UserController@tryLogout');
+ Route::get('/add', 'BookController@getAdd');
 
 //绑定model
 Route::model('book','Book');

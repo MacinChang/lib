@@ -2,12 +2,15 @@
 
 class HomeController extends BaseController 
 {
+	protected $layout = 'layout.index';
+	
 	public function getIndex()
 	{
 		$pro_books = Book::orderBy('id', 'desc') -> take(5) -> get();
 		$this -> layout -> propose_list = View::make('home') -> nest('content', 'a_recommendation', compact('pro_books'));
 		$books = Book::orderBy('id', 'desc') -> paginate(4);
 		$books -> getFactory() -> setViewName('pagination::slider');
+		//$this -> layout -> username = Auth::user() -> name;
 		$this -> layout -> source = 'look';
 		$this -> layout -> book_list = View::make('home') -> nest('content', 'a_book', compact('books'));
 		$this -> layout -> search_result = 'No results!';
