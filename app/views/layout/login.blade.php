@@ -18,7 +18,7 @@
 			<div id='switch'>
 				<span>注册</span>→
 			</div>
-			<form id='login' action = '/logine' method = 'get'>
+			<form id='login' action = '/login' method = 'post'>
 				<input type='text' id='account' placeholder="账号" class='input' name='account'><span class='tips'></span>
 				<br/>
 				<input type='password' id='password' placeholder='密码' class='input' name = 'password'><span class='tips'></span>
@@ -34,7 +34,7 @@
 				<input class='input' type='text' id='name' placeholder='姓名' name = 'name'><span class='tips'></span><br/>
 				<input class='input' type='password' id='pw' placeholder='密码' name = 'password'><span class='tips'></span><br/>
 				<input class='input' type='password' id='pw2' placeholder='确认密码'><span class='tips'></span><br/>
-				<select>
+				<select name = 'team'>
 					<option value='undefined'>组别</option>
 					<option value="web">web</option>
 					<option value='安卓'>安卓</option>

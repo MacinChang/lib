@@ -16,6 +16,7 @@
  Route::get('/try', 'UserController@tryLogin');
  Route::get('/logout', 'UserController@tryLogout');
  Route::get('/add', 'BookController@getAdd');
+ Route::get('/addRecord', 'RecordController@addRecord');
 
 //绑定model
 Route::model('book','Book');
@@ -32,8 +33,10 @@ Route::group(['prefix' => 'admin', 'before' => 'checkAdmin'], function()
 
 
 Route::get('/login','UserController@showLogin');
+
 Route::post('/register', 'UserController@postRegister');
-Route::get('/logine', 'UserController@postLogin');
+
+Route::post('/login', 'UserController@postLogin');
 
 Route::group(['prefix' => '', 'before' => 'checkUser'], function()
 {
@@ -43,6 +46,7 @@ Route::group(['prefix' => '', 'before' => 'checkUser'], function()
 	Route::get('/r', 'HomeController@getRecord');
 
 	Route::get('/book/{bId}', ['as' => 'book.index', 'uses' => 'BookController@showBook']);
+	Route::get('/borrow', 'BookController@borrowBook');
 
 });
 
