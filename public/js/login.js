@@ -170,6 +170,12 @@ window.onload=function(){
 
     oLoginBtn.onclick=function()
     {
+        //前端验证
+        var aVerification=document.getElementsByTagName('input');
+        for(i=0 ; i<aVerification.length ; i++)
+        {
+            
+        }
         // alert('login')
         //登陆接口
     }
