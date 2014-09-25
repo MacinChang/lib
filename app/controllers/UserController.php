@@ -2,7 +2,7 @@
 <?php
 	class UserController extends BaseController
 	{
-		///protected $layout = 'layout.showuser';
+		//protected $layout = 'layout.showuser';
 
 		public function showLogin()
 		{
@@ -12,7 +12,7 @@
 			}
 			else
 			{
-				return View::make('login');
+				return View::make('layout.login');
 				//return Hash::make('zhangji');
 			}
 			

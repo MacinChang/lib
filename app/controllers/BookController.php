@@ -45,7 +45,18 @@
 		}
 		public function borrowBook()
 		{
-			
+			$b_id = Input::get('book_id');
+			$res = Book::whereRaw('id', $b_id) -> get();
+			foreach ($res as  $book){
+				if ($book -> states != 0){
+					return '暂时不能借';
+				}
+			}
+			$record = new Record;
+			$record -> u_id = Auth::user() -> id;
+			$record -> b_id = $b_id;
+			$record -> save();
+			return '借书成功';
 		}
 		public function returnBook()
 		{

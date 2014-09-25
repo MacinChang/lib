@@ -43,6 +43,8 @@ Route::group(['prefix' => '', 'before' => 'checkUser'], function()
 	Route::get('/r', 'HomeController@getRecord');
 
 	Route::get('/book/{bId}', ['as' => 'book.index', 'uses' => 'BookController@showBook']);
+	Route::get('/borrow', 'BookController@borrowBook');
+	Route::get('/return', 'BookController@returnBook');
 
 });
 

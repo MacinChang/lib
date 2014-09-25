@@ -24,7 +24,7 @@
 	<div id='main'>
 		<div id='main_cont'>
 			<div id='nav'>
-				<a href="javascript:void(0);" id='category' class = 'setNav'>图书汇总</a><a href="javascript:void(0);" id='search'>查找图书</a><a href="javascript:void(0);" id='record'>借书纪录</a>
+				<a id='category' class = 'setNav'>图书汇总</a><a id='search'>查找图书</a><a id='record'>借阅记录</a>
 			</div>
 			<div id='books' class='a_cont'>
 				{{$book_list}}                                       

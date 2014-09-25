@@ -13,6 +13,7 @@ window.onload=function(){
 		setNav('search');
 	}
 	oBtn3.onclick=function(){
+		alert('!');
 		navOnClick('borrow_record');
 		setNav('record');
 	}

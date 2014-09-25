@@ -18,8 +18,6 @@
 		<td class='book_author'>
 			{{$record -> author}}
 		</td>
-		<td class='book_intro'>
-		</td>
 	</tr>
 @endforeach
 {{$posts->links()}}
