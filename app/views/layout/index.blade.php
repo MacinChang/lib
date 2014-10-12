@@ -9,18 +9,8 @@
 
 </style>
 <body>
-<div id='top' class=''>
-	<div id='logo' >ASCII Library <span id='logo_shadow'></span></div>
-	<div id='data'>
-		<span class='username'>{{$username}}</span>,您好
-		<a href="/logout">注销</a>
-	</div>
-</div>
+<php? include'top.blade.php'; ?>
 <div id='container' class=''>
-	<div id='search_bl'>
-			<input name = 'wd' type='text' placeholder='请输入你想查找的书名或关键字' >
-			<a href = 'javascipt:void(0)'  id = 's_btn'>搜索</a>
-	</div>
 	<div id='main'>
 		<div id='main_cont'>
 			<div id='nav'>

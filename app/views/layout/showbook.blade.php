@@ -20,13 +20,15 @@
 		.is_cool{display: inline-block; margin-left: 320px;}
 		.is_shit{}
 		.state{}
-		.borrow_btn{display: inline-block; margin-left: 350px;}
-		.return_btn{display: inline-block; margin-left: 40px;}
+		.borrow_btn{display: inline-block; margin-left: 0px; display: none;}
+		.return_btn{display: inline-block; margin-left: 0px;}
 </style> 
 </head>
 <body>
 <!-- 这里放头部啊、搜索框什么的 -->
-
+<php?
+	include'top.blade.php';
+?>
 
 
 <!-- 以下是show-book页面 -->
@@ -41,14 +43,28 @@
 		<span class='show_author'><!-- 这里是作者 --></span><br>
 		<span class='show_press'><!-- 这里是出版社 --></span><br>
 		<textarea class='show_introduction' readonly></textarea><br>
-		<span class='lend_times'>已被借过<span><!-- 这里写个数字 --></span>次了</span>
-		<input type='button' class='is_cool' value='赞'/>（<span class='times_of_coll'></span>）
-		<input type='button' class='is_shit' value='踩'/>（<span class='times_of_shit'></span>）<br>
+		<br>
+		借书纪录：<br/>
+		<table>
+			<th>
+				<td>序号</td>
+				<td>借出时间</td>
+				<td>归还时间</td>
+				<td>借书人</td>
+			</th>
+			<!-- 一下是实例 -->
+			<tr class='a_borrow_record'>
+				<td class='record_umber'>1</td>
+				<td class='borrow_time'>2014-10-1</td>
+				<td class='return_time'>2014-10-2</td>
+				<td class='borrower'>蔡杰熙</td>
+			</tr>
+		</table>
 		状态：<span class='state'></span>
 		<input type='button' class='borrow_btn' value='借书'>
 		<input type='button' class='return_btn' value='还书'>
 	</div>
 </div>
-
+<script type="text/javascript" src='../js/showbook.js'></script>
 </body>
 </html>

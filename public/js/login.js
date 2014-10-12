@@ -1,15 +1,15 @@
 window.onload=function(){
-	// 页面初始化时对所有input做初始化
-// 	PlaceHolder.init();
-// 	var aInput=document.getElementsByTagName('input');
-// 	for (var i = 0; i <= aInput.length; i++) {
-// 		aInput[i].onfocus=function(){
-// 			if(this.className=='input')this.className='onFocus';
-// 		}
-// 		aInput[i].onblur=function(){
-// 			if(this.className=='onFocus')this.className='input';
-// 		}
-// 	}
+    // 页面初始化时对所有input做初始化
+//  PlaceHolder.init();
+//  var aInput=document.getElementsByTagName('input');
+//  for (var i = 0; i <= aInput.length; i++) {
+//      aInput[i].onfocus=function(){
+//          if(this.className=='input')this.className='onFocus';
+//      }
+//      aInput[i].onblur=function(){
+//          if(this.className=='onFocus')this.className='input';
+//      }
+//  }
 // }
 
 
@@ -88,6 +88,7 @@ window.onload=function(){
              oSwitchWords.innerHTML="注册"
             // alert(this.innerHTML);
         }
+        clearAllTips();
     }
     //切换函数switchFromTo();
     function switchFromTo(objOne,objTwo)
@@ -98,11 +99,22 @@ window.onload=function(){
         // alert(this.objOne.innerHTML);
         this.objOne.style.display='none';
         this.objTwo.style.display='block';
+
     }
 
 //****************************************************
     //文本框获取焦点变化，失焦判断内容是否合格
     var aInputs=document.getElementsByTagName('input');
+    //切换时清楚所有提示
+    function clearAllTips()
+    {
+        // alert('asaddf')
+        for(i=0 ; i<aInputs.length ; i++)
+        {
+            // alert(aInputs[i].nextSibling.innerHTML);
+            aInputs[i].nextSibling.innerHTML='';
+        }
+    }
     // alert(aInputs[0].placeholder);
     for(i=0;i<aInputs.length;i++)
     {
@@ -112,14 +124,11 @@ window.onload=function(){
             var oTip=this.nextSibling;
             clearTips(this,oTip);
             this.style.background='#fff';
-            if(this.id='pw2')
-            {
-                var pw1=document.getElementById('pw').value;
-                if(pw1=='')
-                {
-                    oTip.innerHTML='请先填写密码';
-                }
-            }
+            var pw1=document.getElementById('pw').value;
+            if(this.id=='pw2'&&!pw1)
+          
+                   oTip.innerHTML='请先填写密码';
+            
         }
         aInputs[i].onblur=function()
         {
@@ -144,10 +153,10 @@ window.onload=function(){
         // alert(obj.nodeName+' + '+oTip.nodeName);
         if(!obj.value)
         {
-            oTip.innerHTML='此处不能为空';
+            oTip.innerHTML='*';
             return false;
         }
-        if(obj.id=='pw2')
+        else if(obj.id=='pw2')
         {
             // alert(obj.id);
             var pw1=document.getElementById('pw').value;
@@ -170,14 +179,16 @@ window.onload=function(){
 
     oLoginBtn.onclick=function()
     {
-        //前端验证
-        var aVerification=document.getElementsByTagName('input');
-        for(i=0 ; i<aVerification.length ; i++)
-        {
-            
-        }
         // alert('login')
         //登陆接口
+
+        // 前端验证
+        // var aVerification=document.getElementsByTagName('input');
+        // for(i=0 ; i<aInputs.length ; i++)
+        // {
+        //     if(aInputs[i].type=='checkbox')
+        //     else if(aInputs[i].nextSibling.innerHTML)alert('填错了')；
+        // }
     }
 
     oRegisterBtn.onclick=function()
@@ -190,7 +201,7 @@ window.onload=function(){
     oCancelBtn.onclick=function()
     {
         // alert('cancel')
-        alert(document.getElementById('pw2').onblur);
+        // alert(document.getElementById('pw2').onblur);
         var aRegisterWords=document.getElementById('register').getElementsByTagName('input');
         var aRegisterTips=document.getElementById('register').getElementsByTagName('span');
         for( i=0; i<aRegisterWords.length;i++)

@@ -10,12 +10,12 @@ body{background: #eee; height: 1000px;}
 #top #data{float: right; margin-right: 200px; margin-top: 80px; font-size: 15px; color: #fff;}
 #top #data span{cursor: default; text-decoration: underline;}
 #top #data a{color: #fff;}
+#search_bl{margin-left: auto; margin-right: auto; text-align: center; margin-top: 100px;}
+#search_bl input{height: 30px; width: 400px; line-height: 30px; font-size: 18px; outline: none; border-radius: 5px; padding-top: 3px; vertical-align: middle;}
+#search_bl a{display: inline-block; height: 28px;width: 50px; text-decoration: none;background: #8deeee; vertical-align: middle; line-height: 30px;font-size: 17px; border-radius: 5px; box-shadow: 2px 1px 3px #80e1e1;}
+#search_bl a:hover{background: #7aceee; box-shadow: 2px 1px 5px #0078d8;}
 
 #container{margin:50px 0 0 0; position: relative; }
-#container #search_bl{margin-left: auto; margin-right: auto; text-align: center;}
-#container #search_bl input{height: 30px; width: 400px; line-height: 30px; font-size: 18px; outline: none; border-radius: 5px; padding-top: 3px; vertical-align: middle;}
-#container #search_bl a{display: inline-block; height: 28px;width: 50px; text-decoration: none;background: #8deeee; vertical-align: middle; line-height: 30px;font-size: 17px; border-radius: 5px; box-shadow: 2px 1px 3px #80e1e1;}
-#container #search_bl a:hover{background: #7aceee; box-shadow: 2px 1px 5px #0078d8;}
 
 #container #search_key_word	{padding: 10px 300px;}
 #container #search_key_word span{cursor:hand; color:#2E88C8; }
