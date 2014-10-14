@@ -28,29 +28,8 @@
 			}
 			else
 			{
-				return "fdafafds";
+				return "error";
 			}
-			// $tobeverified=[
-			// 	'account' => $account,
-			// 	'password' => $password
-			// ];
-			// $rules=[
-			// 	'account' => 'required',
-			// 	'password' => 'required'
-			// ];
-
-			// $validator = Validator::make($tobeverified,$rules);
-
-			// if ($validator -> passes())
-			// {
-			// 	if (Auth::attempt($tobeverified))
-			// 		return Redirect::to('/');
-			// 	return Redirect::to('login') -> withInput(Input::except('password')) -> with('failure','登录失败');
-			// }
-			// else
-			// {
-			// 	return 'Redirect::to()';
-			// }
 		}
 
 		public function postRegister()
@@ -104,13 +83,6 @@
 		public function tryLogout()
 		{
 			Auth::logout();
-			if(Auth::check())
-			{
-				return '注销失败';
-			}
-			else
-			{
-				return '注销成功';
-			}
+			Redirect::to('/login');
 		}
 	}

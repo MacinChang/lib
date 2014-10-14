@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title>书本详情</title>
+	<title>{{$book -> name}}</title>
 <meta charset='utf-8'>
 <style type="text/css">
 .show_book{border: 1px solid #ccc; margin: 50px 20%}
@@ -36,12 +36,12 @@
 	<div class='show_cover'>
 		<span class='left-top'></span>
 		<span class='right-bottom'></span>
-		<!-- 这里放封面图片 --><img src="images/s1959967.jpg">
+		<img src="{{$book -> image_url}}">
 	</div>
 	<div class='show_detail'>
-		<span class='show_title'><!-- 这里放书名 --></span><br>
-		<span class='show_author'><!-- 这里是作者 --></span><br>
-		<span class='show_press'><!-- 这里是出版社 --></span><br>
+		<span class='show_title'>{{$book -> name}}</span><br>
+		<span class='show_author'>{{$book -> author}}</span><br>
+		<span class='show_press'>{{$book -> press}}</span><br>
 		<textarea class='show_introduction' readonly></textarea><br>
 		<br>
 		借书纪录：<br/>

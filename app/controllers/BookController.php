@@ -40,8 +40,9 @@
 
 		public function showBook($b_id)
 		{
-			$book = Book::whereRaw('id', $b_id) -> get();
-			$this -> layout -> result = $book;
+
+			$book = DB::table('book') -> where('id', $b_id) -> first();
+			$this -> layout -> book = $book;
 		}
 		public function borrowBook()
 		{
@@ -60,7 +61,7 @@
 		}
 		public function returnBook()
 		{
-			
+
 		}
 
 		public function getAdd()
